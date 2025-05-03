@@ -1,0 +1,96 @@
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1f1c2c, #928dab); /* Dark gradient background */
+}
+
+/* Calculator Container */
+.calculator {
+  width: 100%;
+  max-width: 340px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.2rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+/* Display */
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 2rem;
+  text-align: right;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #f3f3f3;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+}
+
+/* Base Button Styles */
+button {
+  font-size: 1.3rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Number Buttons (0-9 and .) - Pastel Green */
+button.number {
+  background-color: #d0f0c0; /* pastel green */
+}
+button.number:hover {
+  background-color: #b9e4ac;
+}
+
+/* Operator Buttons (+, -, *, /, %) - Pastel Blue */
+button.operator {
+  background-color: #cce5ff; /* pastel blue */
+}
+button.operator:hover {
+  background-color: #b3d8ff;
+}
+
+/* Clear (C) and Delete (⌫) - Pastel Red */
+button.control {
+  background-color: #ffcccc; /* pastel red */
+}
+button.control:hover {
+  background-color: #ffb3b3;
+}
+
+/* Equals (=) Button - Pastel Orange */
+button.equal {
+  background-color: #ffe0b3; /* pastel orange */
+}
+button.equal:hover {
+  background-color: #ffd199;
+}
+
+/* Wide Zero Button */
+.zero {
+  grid-column: span 2;
+}
